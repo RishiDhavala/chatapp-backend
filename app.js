@@ -12,7 +12,7 @@ const Messages = require("./models/Message");
 const cors = require("cors");
 const io=require("socket.io")(8080,{
   cors:{
-    origin:'http://localhost:5173'
+    origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com']
   }
 })
 
