@@ -1,8 +1,9 @@
+
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
 const mongoose = require("mongoose");
-const url =
+const url =process.env.DATABASE||  
   "mongodb+srv://netflix:netflix@cluster0.yspy8dp.mongodb.net/chat-app";
 const Users = require("./models/User");
 const bcryptjs = require("bcryptjs");
@@ -15,6 +16,9 @@ const io=require("socket.io")(8080,{
     origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com']
   }
 })
+const BASE_URL=process.env.BASE_URL
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
