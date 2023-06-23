@@ -14,7 +14,7 @@ const cors = require("cors");
 const PORT=process.env.PORTNUMBER || 8080
 const io=require("socket.io")(PORT,{
   cors:{
-    origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com','https://chat-with-me-server.onrender.com']
+    origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com','https://chat-with-me-server.onrender.com','http://localhost:8080']
   }
 })
 const BASE_URL=process.env.BASE_URL
