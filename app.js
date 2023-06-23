@@ -12,7 +12,7 @@ const Chat = require("./models/Chat");
 const Messages = require("./models/Message");
 const cors = require("cors");
 const PORT=process.env.PORTNUMBER || 8080
-const io=require("socket.io")(PORT,{
+const io=require("socket.io")('https://chat-with-me-server.onrender.com',{
   cors:{
     origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com']
   }
