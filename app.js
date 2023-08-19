@@ -16,7 +16,7 @@ const server=require('http').createServer(app)
 
 const io=require("socket.io")(server,{
   cors:{
-    origin:['http://localhost:5173','https://chat-with-me-oh08.onrender.com','https://chat-with-me-server.onrender.com','http://localhost:8080']
+    origin:['https://chatapp-frontend-two.vercel.app/']
   }
 })
 const BASE_URL=process.env.BASE_URL
